@@ -22,6 +22,10 @@ function Pagination() {
       });
   }, []);
 
+  useEffect(() => {
+    console.log("Page changed:", currentPage);
+  }, [currentPage]);
+
   const startIndex = (currentPage - 1) * page;
   const currentData = data.slice(startIndex, startIndex + page);
 
@@ -37,9 +41,14 @@ function Pagination() {
     }
   };
 
+  // Handle loading or error state
+  if (error) return <div>Error loading data.</div>;
+  if (data.length === 0) return <div>Loading...</div>;
+
   return (
     <div className='container'>
       <h1>Employee Data Table</h1>
+
       <table className='table'>
         <thead>
           <tr>
@@ -63,5 +72,4 @@ function Pagination() {
     </div>
   );
 }
-
 export default Pagination;
