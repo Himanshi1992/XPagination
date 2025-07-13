@@ -54,9 +54,10 @@ function Pagination() {
           ))}
         </tbody>
       </table>
+
       <div className='pagination-button'>
         <button onClick={handlePrev} disabled={currentPage === 1}>Previous</button>
-        <p>{currentPage}</p>
+        <div id="current-page-number">{currentPage}</div>
         <button onClick={handleNext} disabled={currentPage === pageCount}>Next</button>
       </div>
     </div>
