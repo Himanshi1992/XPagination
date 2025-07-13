@@ -46,3 +46,8 @@ button:disabled {
   background-color: #aaa;
   cursor: not-allowed;
 }
+.navigate{
+  font-size: 16px;
+  margin: 0 12px;
+  font-weight: bold;
+}

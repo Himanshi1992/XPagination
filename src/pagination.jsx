@@ -61,7 +61,7 @@ function Pagination(){
             </table>
             <div className='pagination-button'>
                 <button onClick={handlePrev} disabled={currentPage===1}>Previous</button>
-                <span><span>{currentPage}</span></span>
+                <div className="navigate"><p>{currentPage}</p></div>
                 <button onClick={handleNext} disabled={currentPage===pageCount}>Next</button>
             </div>
         </div>
